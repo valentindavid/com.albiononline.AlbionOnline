@@ -1,7 +1,7 @@
 {
     "app-id": "com.albiononline.AlbionOnline",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "21.08",
+    "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "albion-online",
     "tags": [
@@ -26,18 +26,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://kerberos.org/dist/krb5/1.19/krb5-1.19.2.tar.gz",
-                    "sha256": "10453fee4e3a8f8ce6129059e5c050b8a65dab1c257df68b99b3112eaa0cdf6a"
-                }
-            ]
-        },
-        {
-            "name": "sndio",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "http://www.sndio.org/sndio-1.2.0.tar.gz",
-                    "sha256": "b9808e189481904a4404b0c1715ad0c4b301e72abca8e49653bb526ff4e16cdc"
+                    "url": "https://kerberos.org/dist/krb5/1.22/krb5-1.22.1.tar.gz",
+                    "sha256": "1a8832b8cad923ebbf1394f67e2efcf41e3a49f460285a66e35adec8fa0053af"
                 }
             ]
         },
@@ -53,8 +43,7 @@
                 "install -Dm644 com.albiononline.AlbionOnline-64.png /app/share/icons/hicolor/64x64/apps/com.albiononline.AlbionOnline.png",
                 "install -Dm644 com.albiononline.AlbionOnline.png /app/share/icons/hicolor/128x128/apps/com.albiononline.AlbionOnline.png",
                 "install -Dm644 com.albiononline.AlbionOnline.appdata.xml /app/share/appdata/com.albiononline.AlbionOnline.appdata.xml",
-                "install -Dm644 com.albiononline.AlbionOnline.desktop /app/share/applications/com.albiononline.AlbionOnline.desktop",
-                "ln -s /lib/libdl.so.2 /app/lib/libdl.so"
+                "install -Dm644 com.albiononline.AlbionOnline.desktop /app/share/applications/com.albiononline.AlbionOnline.desktop"
             ],
             "sources": [
                 {
@@ -95,9 +84,9 @@
                 {
                     "type": "extra-data",
                     "filename": "albion-online-setup",
-                    "url": "https://live.albiononline.com/autoupdate/launcher-linux-setup-1.0.34.404",
-                    "sha256": "92e9bb0c22a006fc63ea6e73935d65c8aa299c0d39030f6ea7bb8cf97b9e7a9d",
-                    "size": 106518821
+                    "url": "https://live.albiononline.com/autoupdate/launcher-linux-setup-1.0.34.551",
+                    "sha256": "ca723d460951a1f1036cd42db4176cc41a8c183cc749a4d04d97f92a26030a9b",
+                    "size": 107581698
                 }
             ]
         }

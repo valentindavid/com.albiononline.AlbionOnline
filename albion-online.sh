@@ -12,7 +12,7 @@ cd "${HOME}/.albiononline"
 installed_version="$(cat launcher/version.txt 2>/dev/null | sed -n '/^launcher-linux-full-\(.*\)\r/{;s//\1/;p;q;}')"
 
 IFS=';' read -a uriver <<<"$(get_albion_online_download_uri)"
-version=${uriver[1]}
+version="$(echo "${uriver[1]}" | sed "s/[.]0*\([0-9]\)/.\1/g")"
 uri=${uriver[0]}
 
 if [ "${version}" != "${installed_version}" ]; then
@@ -27,6 +27,5 @@ if [ "${version}" != "${installed_version}" ]; then
     rm albion-online-setup.zip
 fi
 
-export LD_PRELOAD="${HOME}/.albiononline/game_x64/Albion-Online_Data/Plugins/x86_64/libSDL2-2.0.so.0"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${HOME}/.albiononline/launcher"
 exec "${HOME}/.albiononline/launcher/Albion-Online"
